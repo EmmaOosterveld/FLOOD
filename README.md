@@ -13,8 +13,11 @@ The repository has been divided into the following components:
 	a. raw_datasets [ids: 1-80 for training, 501-520 as testing dataset 1, 10001-10020 as Testing dataset 2 and 15001-15020: Testing dataset 3]
 2. CNN model - where CNN model is stored
 3. GNN_model - where GNN model is stored. The folder consists of the following parts:
-   	a. model - GNN_model.py
-	b. functions - GNN_preprocessing.py and GNN_postprocessing.py
-	c. notebooks - GNN_notebook and GNN_optimizer.
+
+   a. model - GNN_model.py
+   
+   b. functions - GNN_preprocessing.py and GNN_postprocessing.py
+   
+   c. notebooks - GNN_notebook and GNN_optimizer.
 
 Note that if you run the Notebooks you get a new, slightly different, best model than the model stored in the 'Models' folder.
