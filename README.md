@@ -13,3 +13,5 @@ The repository has been divided into the following folder:
 3. Notebooks (python notebook to be used to run the models for training and testing)
 	a. CNN 
 	b. GNN - GNN_model.py and GNN_preprocessing.py
+
+Note that if you run the Notebooks you get a new, slightly different, best model than the model stored in the 'Models' folder.
