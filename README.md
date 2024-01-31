@@ -16,8 +16,10 @@ The repository has been divided into the following components:
 
    a. model - GNN_model.py and best_model_final.pth
    
-   b. processing - GNN_preprocessing.py and GNN_postprocessing.py
+   b. notebooks - GNN_notebook and GNN_optimizer.
    
-   c. notebooks - GNN_notebook and GNN_optimizer.
+   c. processing - GNN_preprocessing.py and GNN_postprocessing.py
 
-Note that if you run the Notebooks you get a new, slightly different, best model than the model stored in the 'Models' folder.
+   c. results - animations of a simulation from dataset 1, 2 and 3 generated with best_model_final.pth
+
+Note that if you run the Notebooks you get a new, slightly different, best model than the model stored in the 'model' folder. The same for the animations in the 'results' folder. 
