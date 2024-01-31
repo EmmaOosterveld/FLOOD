@@ -16,7 +16,7 @@ The repository has been divided into the following components:
 
    a. model - GNN_model.py
    
-   b. functions - GNN_preprocessing.py and GNN_postprocessing.py
+   b. processing - GNN_preprocessing.py and GNN_postprocessing.py
    
    c. notebooks - GNN_notebook and GNN_optimizer.
 
