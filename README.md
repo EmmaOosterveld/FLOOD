@@ -14,7 +14,7 @@ The repository has been divided into the following components:
 2. CNN model - where CNN model is stored
 3. GNN_model - where GNN model is stored. The folder consists of the following parts:
 
-   a. model - GNN_model.py
+   a. model - GNN_model.py and best_model_final.pth
    
    b. processing - GNN_preprocessing.py and GNN_postprocessing.py
    
