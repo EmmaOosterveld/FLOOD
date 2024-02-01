@@ -33,7 +33,8 @@ def output_animation(d_dem, d_output, d_data, id, dataset, size, pos):
   fig, ax = plt.subplots(1, 3, figsize=(10, 4))
 
   # Create initial plot for DEM
-  dem_plot = ax[0].imshow(d_dem.reshape(size,size), cmap='terrain', extent=(min(x), max(x), min(y), max(y)))
+  correct_dem = torch.flip(d_dem[:, 0].reshape(size, size), dims=[0])
+  dem_plot = ax[0].imshow(correct_dem, cmap='terrain', extent=(min(x), max(x), min(y), max(y)))
   ax[0].set_title('DEM')
 
   # Create initial scatter plots
@@ -57,7 +58,8 @@ def output_animation(d_dem, d_output, d_data, id, dataset, size, pos):
   # Function to update the scatter plot for each timestep
   def update(timestep):
       ax[0].clear()  # Clear the current axis
-      dem_plot = ax[0].imshow(d_dem.reshape(size, size), cmap='terrain', extent=(min(x), max(x), min(y), max(y)))
+      correct_dem = torch.flip(d_dem[:, 0].reshape(size, size), dims=[0])
+      dem_plot = ax[0].imshow(correct_dem, cmap='terrain', extent=(min(x), max(x), min(y), max(y)))
       ax[0].set_title('DEM')
 
       ax[1].clear()  # Clear the current axis
