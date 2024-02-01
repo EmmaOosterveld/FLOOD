@@ -1,6 +1,6 @@
 ### Group FLOOD1: Spatio-temporal flood estimation using Deep Learning
 
-This is the code repository created in order to provide the code for the project: Spatiotemporal flood modelling with Deep learning. The aim of this project is to selected models should be able to predict the spatial-temporal evolution of floods over unseen topographies.
+This is the code repository created in order to provide the code for the project: Spatiotemporal flood modelling with Deep learning. The aim of this project is to selected models that are to predict the spatial-temporal evolution of floods over unseen topographies.
 The project content consists of two main notebooks for the models namely CNN U-net style model and Graph neural network (GNN) model. In both cases, the Digital Elevation model and initial condition for water depth have been considered as inputs while predicting the water depths over a time series of 48 hours. 
 
 U-net style model: CNNs are suited, because they work well with images or grid-based data. 
