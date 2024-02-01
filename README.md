@@ -12,6 +12,7 @@ The repository has been divided into the following components:
 1. Data - datasets to be used in the model runs
 	a. raw_datasets [ids: 1-80 for training, 501-520 as testing dataset 1, 10001-10020 as Testing dataset 2 and 15001-15020: Testing dataset 3]
 2. CNN model - where CNN model is stored. The folder consists of the following parts:
+
    a. Data - Data_processing.py and map that contains the preprocessed data for the training set and the three test datasets
 
    b. Models - CNN_UNet.py
