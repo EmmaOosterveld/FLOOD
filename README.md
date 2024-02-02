@@ -3,7 +3,7 @@
 This is the code repository created in order to provide the code for the project: Spatiotemporal flood modelling with Deep learning. The aim of this project is to selected models that are to predict the spatial-temporal evolution of floods over unseen topographies.
 The project content consists of two main notebooks for the models namely CNN U-net style model and Graph neural network (GNN) model. In both cases, the Digital Elevation model and initial condition for water depth have been considered as inputs while predicting the water depths over a time series of 48 hours. 
 
-U-net style model: CNNs are suited, because they work well with images or grid-based data. 
+U-net style model: CNNs are suited, because they work well with images or grid-based data. The U-net style CNN consists of encoder-decoder set-up. The model will take into account DEM and WD as the input and predict the WD per timestep in one-go. The model is set to be improved by optimizing the parameters and data augmentation.
 
 Graph neural network model (GNN): GNN are designed to work with Graph data. The graph consists of nodes that form the structure and edges that join the nodes. In the GNN model, the inputs DEM and WD (initial) have been added to the nodes. The model is made of an encoder-processor-decoder setup where MLPs are used in the encoder and decoder and the processor does the Graph Convolutions. 
 The model .py file has been provided in the models folder. A separate notebook that was used for optimising the parameters to be used in the computation.
