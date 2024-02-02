@@ -187,6 +187,12 @@ class CustomMinMaxScaler_interpolation:
     def fit(self, X):
         self.min_val = np.nanmin(X, axis=0)
         self.max_val = np.nanmax(X, axis=0)
+        # If there is no variation, i.e. min = max, this will give a Division by Zero error.
+        # To prevent this 0.1 is added to the maximum. 
+        # Since the numerator will be zero anyway (X - self.new_min = 0, since there is no variation in X)
+        # The number added to the maximum is irrelevant, as the outcome will always be zero.
+        if self.min_val == self.max_val: 
+           self.max_val += 0.1
 
     def transform(self, X):
         # Check if the scaler has been fitted
@@ -204,6 +210,9 @@ class CustomMinMaxScaler_interpolation:
           # Interpolate values using numpy's interpolation function
           self.new_min = np.interp(indices, np.arange(original_size), self.min_val)
           self.new_max = np.interp(indices, np.arange(original_size), self.max_val)
+
+          if self.new_min == self.new_max: 
+            self.new_max += 0.1
 
           # Scale the features to the specified range
           scaled_X = (X - self.new_min) / (self.new_max - self.new_min)
