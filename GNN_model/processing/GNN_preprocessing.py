@@ -191,8 +191,8 @@ class CustomMinMaxScaler_interpolation:
         # To prevent this 0.1 is added to the maximum. 
         # Since the numerator will be zero anyway (X - self.new_min = 0, since there is no variation in X)
         # The number added to the maximum is irrelevant, as the outcome will always be zero.
-        if self.min_val == self.max_val: 
-           self.max_val += 0.1
+        if np.any(self.min_val == self.max_val): 
+            self.max_val[self.min_val == self.max_val] += 0.001
 
     def transform(self, X):
         # Check if the scaler has been fitted
@@ -211,8 +211,8 @@ class CustomMinMaxScaler_interpolation:
           self.new_min = np.interp(indices, np.arange(original_size), self.min_val)
           self.new_max = np.interp(indices, np.arange(original_size), self.max_val)
 
-          if self.new_min == self.new_max: 
-            self.new_max += 0.1
+          if np.any(self.new_min == self.new_max): 
+            self.new_max[self.new_min == self.new_max] += 0.001
 
           # Scale the features to the specified range
           scaled_X = (X - self.new_min) / (self.new_max - self.new_min)
